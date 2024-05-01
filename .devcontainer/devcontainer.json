@@ -1,0 +1,8 @@
+{
+  "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
+  "workspaceFolder": "/app",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  }
+}
