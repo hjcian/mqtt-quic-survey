@@ -33,3 +33,8 @@ run-compose:
 
 stop-compose:
 	docker-compose down
+
+clean-install-pynng-mqtt:
+	rm -rf pynng-mqtt/mbedtls/build/
+	rm -rf pynng-mqtt/nng/build/
+	cd pynng-mqtt && pip3 install --user asyncio && pip3 install -e .
