@@ -1,0 +1,2 @@
+-i https://pypi.org/simple
+paho-mqtt==2.1.0; python_version >= '3.7'

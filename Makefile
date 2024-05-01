@@ -19,5 +19,17 @@ stop-broker:
 
 restart-broker: stop-broker run-broker
 
+build-python-client-docker-image:
+	docker build -t local/python-mqtt-client -f python/Dockerfile python/
+
+run-python-client:
+	docker run --rm -it --name python-mqtt-client local/python-mqtt-client
+
 check-config:
 	docker exec emqx bash -c "emqx ctl listeners"
+
+run-compose:
+	docker-compose up -d
+
+stop-compose:
+	docker-compose down
